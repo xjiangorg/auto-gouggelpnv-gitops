@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: auto-gouggelpnv-gitops-repository
+spec:
+  url: https://github.com/xjiangorg/auto-gouggelpnv-gitops

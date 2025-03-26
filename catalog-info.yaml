@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: auto-gouggelpnv-gitops
+  description: This is GitOps manifest for auto-gouggelpnv   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=auto-gouggelpnv
+    backstage.io/kubernetes-id: auto-gouggelpnv 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: auto-gouggelpnv   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:auto-gouggelpnv
